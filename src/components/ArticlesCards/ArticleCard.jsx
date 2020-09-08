@@ -4,7 +4,7 @@ import {Card} from 'antd';
 const {Meta} = Card;
 
 
-export const ArticleCard = ({title, url, urlToImage, description, onClick, publishedAt}) => {
+export const ArticleCard = ({title, url, urlToImage, description, onClick}) => {
     return (
             <Card
                 hoverable

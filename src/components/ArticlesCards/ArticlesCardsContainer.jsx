@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {ArticleCard} from "./ArticleCard";
 import {Col, Pagination, Row, Space, Spin} from "antd";
 import {useDispatch, useSelector} from "react-redux";
@@ -31,8 +31,8 @@ export const ArticlesCardsContainer = () => {
         return <Space size="middle"><Spin size="large" /></Space>
     }
 
-    const posts = articles.map((item, index) => <Col span={8}>
-        <ArticleCard {...item} onClick={onClick} key={item.publishedAt} /></Col>)
+    const posts = articles.map((item) => <Col key={item.publishedAt} span={8}>
+        <ArticleCard {...item} onClick={onClick}  /></Col>)
     return (
         <div className='site-card-wrapper'>
             <Row gutter={16}>
